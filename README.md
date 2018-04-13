@@ -1,4 +1,5 @@
 # zabbix docker-swarm-service-monitor
+此脚本使用于zabbix通过low level discovery 监控docker service 
 
 ## zabbix agent 配置文件中增加
 UserParameter=dockerservice.discovery,/usr/bin/python /usr/local/zabbix/scripts/docker_low_discovery.py
@@ -19,3 +20,5 @@ docker service create -d --name get-container-stats \
     	--mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock \
     	--mount type=bind,source=/sys/fs/cgroup,target=/sys/fs/cgroup \
     	get-container-stats:v1.0.2
+
+
