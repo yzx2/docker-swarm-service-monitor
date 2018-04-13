@@ -15,7 +15,7 @@ docker service create -d --name get-container-stats \
     	-e Redis_host=x.x.x.x \
     	-e Redis_port=6379 \
     	-e Redis_pass=xxxx \
-    	-e interval_time=300 \
+    	-e Interval_time=300 \
     	--mount type=bind,source=/etc/localtime,target=/etc/localtime \
     	--mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock \
     	--mount type=bind,source=/sys/fs/cgroup,target=/sys/fs/cgroup \
