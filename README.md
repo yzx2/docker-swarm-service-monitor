@@ -21,4 +21,10 @@ docker service create -d --name get-container-stats \
     	--mount type=bind,source=/sys/fs/cgroup,target=/sys/fs/cgroup \
     	get-container-stats:v1.0.2
 
+## zabbix web 配置
 
+模板：zabbix_temp/zbx_docker_service_templat.xml
+
+![image](https://github.com/yzx2/docker-swarm-service-monitor/blob/master/images/1.png)
+![image](https://github.com/yzx2/docker-swarm-service-monitor/blob/master/images/2.png)
+![image](https://github.com/yzx2/docker-swarm-service-monitor/blob/master/images/3.png)
