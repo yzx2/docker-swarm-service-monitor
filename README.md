@@ -1,5 +1,5 @@
 # zabbix docker-swarm-service-monitor
-此脚本使用于zabbix通过low level discovery 监控docker service 
+此脚本使用于zabbix通过low level discovery 监控docker service
 
 ## zabbix agent 配置文件中增加
 UserParameter=dockerservice.discovery,/usr/bin/python /usr/local/zabbix/scripts/docker_low_discovery.py
