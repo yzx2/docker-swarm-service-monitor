@@ -8,10 +8,8 @@ ServiceName=sys.argv[1]
 Item=sys.argv[2]
 
 client = docker.DockerClient(base_url='unix://var/run/docker.sock',version='auto')
-R=redis.Redis(host='10.10.6.192',port=6379,password='sqbj@123')
+R=redis.Redis(host='x.x.x.x',port=6379,password=xxxxxxxxxx)
 
-def set_redis(k,v):
-    R.set(k,v)
 def get_redis(k):
     return R.get(k)
 #根据服务名称获取docker service id
