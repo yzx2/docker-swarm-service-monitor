@@ -1,9 +1,9 @@
-# docker-swarm-service-monitor
+# zabbix docker-swarm-service-monitor
 
 ## zabbix agent 配置文件中增加
 UserParameter=dockerservice.discovery,/usr/bin/python /usr/local/zabbix/scripts/docker_low_discovery.py
-UserParameter=dockerservice.status[*],/usr/bin/python /usr/local/zabbix/scripts/docker_service_monitor.py $1
-UserParameter=ds[*],/usr/bin/python /usr/local/zabbix/scripts/get_service_stats.py $1 $2
+UserParameter=dockerservice.status\[\*\],/usr/bin/python /usr/local/zabbix/scripts/docker_service_monitor.py $1
+UserParameter=ds\[\*\],/usr/bin/python /usr/local/zabbix/scripts/get_service_stats.py $1 $2
 
 ## 创建docker service 在每个节点上都部署
 docker service create -d --name get-container-stats \
